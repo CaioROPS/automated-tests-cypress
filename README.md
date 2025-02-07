@@ -33,6 +33,7 @@ Cypress Xpath: Suporte para seletores XPath.
 ✅ Facilidade de manutenção: Código organizado e separado por responsabilidade.
 
 🔧 Execução dos Testes
+
 Clone o repositório:
 git clone https://github.com/seu-usuario/seu-repositorio.git
 
