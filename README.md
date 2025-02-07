@@ -7,26 +7,26 @@ Este projeto implementa testes automatizados utilizando Cypress para validar um 
 
 ⚙️ Tecnologias Utilizadas
 
-Cypress: Framework de testes E2E.
+- Cypress: Framework de testes E2E.
 
-Faker.js: Geração dinâmica de dados.
+- Faker.js: Geração dinâmica de dados.
 
-Cypress Xpath: Suporte para seletores XPath.
+- Cypress Xpath: Suporte para seletores XPath.
 
 
 🚀 Funcionalidades Testadas
 
-✅ Login como administrador
+- Login como administrador ✅
 
-✅ Cadastro de novo usuário (com geração de nome dinâmico)
+- Cadastro de novo usuário (com geração de nome dinâmico) ✅
 
-✅ Edição de usuário (alteração de status e redefinição de senha)
+- Edição de usuário (alteração de status e redefinição de senha) ✅
 
-✅ Exclusão de usuário
+- Exclusão de usuário ✅
 
-✅ Validação de mensagens de sucesso
+- Validação de mensagens de sucesso ✅
 
-✅ Captura de screenshots em cada etapa
+- Captura de screenshots em cada etapa ✅
 
 
 🏗 Estrutura do Código
@@ -50,10 +50,13 @@ Cypress Xpath: Suporte para seletores XPath.
 
  
 📌 Boas Práticas Aplicadas
-✅ Modularização: Separação de seletores, funções reutilizáveis e credenciais.
-✅ Reutilização de código: Importação de funções para manter os testes limpos e escaláveis.
-✅ Assertividade: Validação das ações realizadas, garantindo confiabilidade nos testes.
-✅ Facilidade de manutenção: Código organizado e separado por responsabilidade.
+- Modularização: Separação de seletores, funções reutilizáveis e credenciais. ✅
+
+- Reutilização de código: Importação de funções para manter os testes limpos e escaláveis. ✅
+
+- Assertividade: Validação das ações realizadas, garantindo confiabilidade nos testes. ✅
+
+- Facilidade de manutenção: Código organizado e separado por responsabilidade. ✅
 
 
 🔧 Execução dos Testes
