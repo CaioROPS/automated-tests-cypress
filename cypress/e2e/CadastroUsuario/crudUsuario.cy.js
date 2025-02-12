@@ -1,16 +1,16 @@
 /// <reference types= 'cypress' />
 
 import 'cypress-xpath'
-import { login, preencherUsuario, preencherSenha, editarSenha } from '../Seletores/reaproveitamentoCodigo.cy.js';
+import { login, preencherUsuario, preencherSenha, editarSenha, preencherSenhaFraca } from '../Seletores/reaproveitamentoCodigo.cy.js';
 import selectors from '../Seletores/seletores.cy.js';
-import { credentials, newCredentials } from '../DadosPessoais/senhas.cy.js';
+import { credentials, newCredentials, credentialsInvalida, credentialsFraca  } from '../DadosPessoais/senhas.cy.js';
 import { faker } from '@faker-js/faker';
 
 
 
-describe('Acessar como admin', () => {   
+describe('Cadastro/Edição/Remoção', () => {   
 
-        it('Deve cadastrar um novo usuário ADMIN com sucesso', () => {
+        it('Deve cadastrar/editar/remover um novo usuário ADMIN com sucesso', () => {
             const randomFullName = faker.person.fullName()
             cy.log(randomFullName)
         
@@ -28,7 +28,7 @@ describe('Acessar como admin', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Chri')
+            preencherUsuario('Timo')
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -47,7 +47,8 @@ describe('Acessar como admin', () => {
 
 
             // Editar usuário
-            cy.xpath("//div[contains(@class, 'oxd-table-row')][.//div[text()='Christopher Mcmillan']]//i[contains(@class, 'bi-pencil-fill')]").first().click()
+            cy.xpath("//div[contains(@class, 'oxd-table-row')][.//div[text()='Timothy Amiano']]//i[contains(@class, 'bi-pencil-fill')]").first().click()
+            cy.wait(2000)
             cy.xpath(selectors.userEdit.statusDropdown).click()
             cy.get(selectors.userEdit.statusInactiveOption).click()
             cy.get(selectors.userEdit.usernameFieldEdit).type(randomFullName)
@@ -66,7 +67,7 @@ describe('Acessar como admin', () => {
 
 
             // Deletar usuário
-            cy.xpath("//div[contains(text(), 'Christopher Mcmillan')]/ancestor::div[contains(@class, 'oxd-table-row')]//i[contains(@class, 'bi-trash')]").first().click();
+            cy.xpath("//div[contains(@class, 'oxd-table-row')][.//div[text()='Timothy Amiano']]//i[contains(@class, 'bi-trash')]").first().click();
             cy.get('.oxd-button--label-danger').click()
 
             // Verificar sucesso
@@ -85,5 +86,80 @@ describe('Acessar como admin', () => {
 
           });
 
+
+          it('Cadastro de usuario com senha fraca', () => {
+            const randomFullName = faker.person.fullName()
+            cy.log(randomFullName)
+        
+            // Acessar site
+            cy.visit('https://opensource-demo.orangehrmlive.com/')
+        
+            // Acessar como admin
+            login(credentials.email, credentials.senha)
+        
+            // Acessar cadastro de novos usuários
+            cy.get(selectors.menu.adminTab).click()
+            cy.get(selectors.menu.addButton).click()
+        
+            // Cadastrar usuário
+            cy.get(selectors.userForm.userRoleDropdown).click()
+            cy.get(selectors.userForm.adminOption).contains('Admin').click()
+        
+            preencherUsuario('Timo')
+        
+            cy.xpath(selectors.userForm.statusDropdown).click()
+            cy.get(selectors.userForm.statusActiveOption).click()
+        
+            cy.get(selectors.userForm.usernameField).type(randomFullName)
+        
+            // Criar senha
+            preencherSenhaFraca(credentialsFraca.senhaF)
+        
+            cy.get(selectors.userForm.saveButton).click()
+        
+            // Verificar sucesso
+            cy.wait(2000)
+            cy.get(selectors.toastMessageF).should('be.visible')
+            cy.screenshot('Não foi possivel cadastrar')
+
+
+          });
+
+          it('Cadastro de usuario com user name invalido', () => {
+            const randomFullName = faker.person.fullName()
+            cy.log(randomFullName)
+        
+            // Acessar site
+            cy.visit('https://opensource-demo.orangehrmlive.com/')
+        
+            // Acessar como admin
+            login(credentials.email, credentials.senha)
+        
+            // Acessar cadastro de novos usuários
+            cy.get(selectors.menu.adminTab).click()
+            cy.get(selectors.menu.addButton).click()
+        
+            // Cadastrar usuário
+            cy.get(selectors.userForm.userRoleDropdown).click()
+            cy.get(selectors.userForm.adminOption).contains('Admin').click()
+        
+            preencherUsuario('Timo')
+        
+            cy.xpath(selectors.userForm.statusDropdown).click()
+            cy.get(selectors.userForm.statusActiveOption).click()
+        
+            cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Ana')
+        
+            // Criar senha
+            preencherSenha(credentials.senha);
+        
+            cy.get(selectors.userForm.saveButton).click()
+        
+            // Verificar sucesso
+            cy.wait(2000)
+            cy.get(selectors.toastMessageInvalido).should('be.visible')
+            cy.screenshot('Não foi possivel cadastrar')
+
+          });
 
 });
