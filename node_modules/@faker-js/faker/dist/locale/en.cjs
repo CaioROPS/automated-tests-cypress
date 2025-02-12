@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});var _chunkDX2WWXWWcjs = require('../chunk-DX2WWXWW.cjs');require('../chunk-XBT53XU2.cjs');require('../chunk-3NDSWINR.cjs');exports.faker = _chunkDX2WWXWWcjs.a;
