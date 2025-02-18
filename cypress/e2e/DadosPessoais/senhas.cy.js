@@ -8,12 +8,13 @@ const credentials = {
   const credentialsFraca = {
     senhaF: "123"
   };
+
+  const credentialsLimite = {
+    senhaU: "1235444dwjndjwnjdnwjdnjwdw7844d8wd8w4dw848dw8448wdwdnjwddwdwdwjjnnndfnwidwimmksdw5454w1d84dw545dw448wd444dwdkwmwd"
+  };
   
   const newCredentials = {
     senha: "senhaforte@123"
   };
 
-  const credentialsInvalida = {
-    userName: "Ana"
-  };
-  export default { credentials, newCredentials, credentialsFraca, credentialsInvalida };
+  export default { credentials, newCredentials, credentialsFraca, credentialsLimite };

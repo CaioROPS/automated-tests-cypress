@@ -24,17 +24,6 @@ export const selectors = {
         saveButton: '.oxd-button--secondary',
     },
 
-    userFormInvalido: {
-        userRoleDropdown: ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon',
-        adminOption: '.oxd-select-option',
-        employeeNameField: "//input[@placeholder='Type for hints...']",
-        statusDropdown: "//div[contains(text(), '-- Select --')]",
-        statusActiveOption: '.oxd-select-dropdown > :nth-child(2) > span',
-        usernameField: ':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input',
-        passwordFieldFraca: '.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input',
-        confirmPasswordFieldFraca: ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
-        saveButton: '.oxd-button--secondary',
-    },
 
     userEdit: {
         statusDropdown: "//div[contains(@class, 'oxd-select-text') and contains(@class, 'oxd-select-text--active')]//div[contains(@class, 'oxd-select-text-input') and text()='Enabled']",
@@ -45,11 +34,12 @@ export const selectors = {
         confirmEditPassword: ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
         saveButton: '.oxd-button--secondary',
     },
+
     toastMessage: '.oxd-text--toast-title', 
     toastMessageF: '.user-password-cell > .oxd-input-group > .oxd-text',
     toastMessageInvalido: ':nth-child(4) > .oxd-input-group > .oxd-text',
-
-
+    toastMessageLimite: '.user-password-cell > .oxd-input-group > .oxd-text',
+    toastMessageUserUltrapassou: ':nth-child(4) > .oxd-input-group > .oxd-text',
   }
 
   export default selectors;

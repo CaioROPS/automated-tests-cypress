@@ -25,7 +25,3 @@ export function login(email, senha) {
     cy.get(selectors.userEdit.confirmEditPassword).type(senha);
   }
 
-  export function preencherSenhaFraca(senhaF) {
-    cy.get(selectors.userForm.passwordField).type(senhaF);
-    cy.get(selectors.userForm.confirmPasswordField).type(senhaF);
-  }
