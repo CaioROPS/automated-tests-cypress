@@ -8,7 +8,7 @@ import { faker } from '@faker-js/faker';
 
 
 
-describe('Cadastro/Edição/Remoção', () => {   
+describe('Validações de Cadastro/Edição/Remoção', () => {   
 
         it('Cadastro colaborador PIM', () => {
           const randomFullName = faker.person.fullName()
