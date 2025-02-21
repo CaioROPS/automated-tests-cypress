@@ -25,3 +25,12 @@ export function login(email, senha) {
     cy.get(selectors.userEdit.confirmEditPassword).type(senha);
   }
 
+  export function preencherSenhas(senha_0, senha_1) {
+    cy.get(selectors.userForm.passwordField).type(senha_0);
+    cy.get(selectors.userForm.confirmPasswordField).type(senha_1);
+  }
+
+  export function preencherSenha1(senha) {
+    cy.get(selectors.employeeForm.passwordField).type(senha);
+    cy.get(selectors.employeeForm.confirmPasswordField).type(senha);
+  }

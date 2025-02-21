@@ -10,11 +10,20 @@ const credentials = {
   };
 
   const credentialsLimite = {
-    senhaU: "1235444dwjndjwnjdnwjdnjwdw7844d8wd8w4dw848dw8448wdwdnjwddwdwdwjjnnndfnwidwimmksdw5454w1d84dw545dw448wd444dwdkwmwd"
+    senhaU: "12254testetestetestetestetetstetestetestetestetetsettetsettetsettetstetetstetetetestetstetetstettetstetetste"
   };
   
   const newCredentials = {
     senha: "senhaforte@123"
   };
 
-  export default { credentials, newCredentials, credentialsFraca, credentialsLimite };
+  const notConfirm = {
+    senha_0: "4senhaforte@123",
+    senha_1: "naotacerta"
+  };
+
+  const credentialsColaborador = {
+    senha: "123senhaforte"
+  };
+
+  export default { credentials, newCredentials, credentialsFraca, credentialsLimite, notConfirm, credentialsColaborador };

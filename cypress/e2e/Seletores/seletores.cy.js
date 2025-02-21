@@ -24,6 +24,21 @@ export const selectors = {
         saveButton: '.oxd-button--secondary',
     },
 
+    menuPim: {
+        employeeTab: "//li[contains(@class, 'oxd-main-menu-item-wrapper')]//a[contains(@class, 'oxd-main-menu-item') and @href='/web/index.php/pim/viewPimModule']//span[text()='PIM']",
+        addButton: '.orangehrm-header-container > .oxd-button',
+    },
+
+    employeeForm: {
+        firstName: '.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input',
+        lastName: ':nth-child(3) > :nth-child(2) > .oxd-input',
+        createLoginDatails: '.oxd-switch-input',
+        usernameField: ':nth-child(4) > .oxd-grid-2 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input',
+        passwordField: '.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input',
+        confirmPasswordField: '.oxd-grid-2 > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input',
+        saveButton: '.oxd-button--secondary',
+    },
+
 
     userEdit: {
         statusDropdown: "//div[contains(@class, 'oxd-select-text') and contains(@class, 'oxd-select-text--active')]//div[contains(@class, 'oxd-select-text-input') and text()='Enabled']",
