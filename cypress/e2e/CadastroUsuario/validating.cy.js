@@ -3,9 +3,9 @@
 import 'cypress-xpath'
 import { login, preencherUsuario, preencherSenha, editarSenha, preencherSenhas, preencherSenha1 } from '../Seletores/reaproveitamentoCodigo.cy.js';
 import selectors from '../Seletores/seletores.cy.js';
-import { credentials, newCredentials, credentialsFraca, credentialsLimite, notConfirm, credentialsColaborador } from '../DadosPessoais/senhas.cy.js';
+import { credentials, newCredentials, credentialsFraca, credentialsLimite, notConfirm, credentialsColaborador } from '../DadosSensiveis/senhas.cy.js';
 import { faker } from '@faker-js/faker';
-
+import { employee } from '../DadosPessoais/info.cy.js';
 
 
 describe('Validações de Cadastro/Edição/Remoção', () => {   
@@ -25,7 +25,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           cy.get(selectors.employeeForm.saveButton).click()
 
@@ -51,7 +51,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
 
           cy.get(selectors.employeeForm.saveButton).click()
 
@@ -78,7 +78,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
 
           // Cadastrar um colaborador
           cy.get(selectors.employeeForm.firstName).click().type('Trevor teste de mais de 30 caracteres no first name')
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           cy.get(selectors.employeeForm.saveButton).click()
 
@@ -104,9 +104,9 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
           cy.get(':nth-child(2) > :nth-child(2) > .oxd-input').type('teste de mais de 30 caracteres no middle name')
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           cy.get(selectors.employeeForm.saveButton).click()
 
@@ -132,7 +132,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
           cy.get(selectors.employeeForm.lastName).type('teste de mais de 30 caracteres no last name')
 
           cy.get(selectors.employeeForm.saveButton).click()
@@ -159,8 +159,8 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           // Criação de senha para colaborador
           cy.get(selectors.employeeForm.createLoginDatails).click()
@@ -191,8 +191,8 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           // Criação de senha para colaborador
           cy.get(selectors.employeeForm.createLoginDatails).click()
@@ -224,8 +224,8 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           // Criação de senha para colaborador
           cy.get(selectors.employeeForm.createLoginDatails).click()
@@ -258,12 +258,12 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
           cy.get(selectors.menuPim.addButton).click()
 
           // Cadastrar um colaborador
-          cy.get(selectors.employeeForm.firstName).click().type('Trevor')
-          cy.get(selectors.employeeForm.lastName).type('Santos')
+          cy.get(selectors.employeeForm.firstName).click().type(employee.firstName)
+          cy.get(selectors.employeeForm.lastName).type(employee.lastName)
 
           // Criação de senha para colaborador
           cy.get(selectors.employeeForm.createLoginDatails).click()
-          cy.get(selectors.employeeForm.usernameField).type('Trevor')
+          cy.get(selectors.employeeForm.usernameField).type(employee.firstName)
 
           preencherSenha1(credentialsColaborador.senha)
           
@@ -294,7 +294,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Trevor')
+            preencherUsuario(employee.firstName)
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -371,7 +371,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Trevor')
+            preencherUsuario(employee.firstName)
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -408,7 +408,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Trevor')
+            preencherUsuario(employee.firstName)
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -444,7 +444,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Trevor')
+            preencherUsuario(employee.firstName)
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -482,7 +482,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Trevor')
+            preencherUsuario(employee.firstName)
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -520,7 +520,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.get(selectors.userForm.userRoleDropdown).click()
             cy.get(selectors.userForm.adminOption).contains('Admin').click()
         
-            preencherUsuario('Trevor')
+            preencherUsuario(employee.firstName)
         
             cy.xpath(selectors.userForm.statusDropdown).click()
             cy.get(selectors.userForm.statusActiveOption).click()
@@ -554,7 +554,7 @@ describe('Validações de Cadastro/Edição/Remoção', () => {
             cy.xpath(selectors.menuPim.employeeTab).click()
 
             // Pesquisar colaborador
-            cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-autocomplete-wrapper > .oxd-autocomplete-text-input > input').type('Trevor')
+            cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-autocomplete-wrapper > .oxd-autocomplete-text-input > input').type(employee.firstName)
             cy.get('.oxd-form-actions > .oxd-button--secondary').click()
 
             // Deletar colaborador
