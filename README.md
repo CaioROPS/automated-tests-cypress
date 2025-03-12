@@ -56,25 +56,6 @@ Este projeto implementa testes automatizados utilizando Cypress para validar um 
 
 - Exclusão de colaborador ✅
 
-🏗 Estrutura do Código
-📂 cypress
-
- ┣ 📂 e2e
-
- ┃ ┣ 📂 CadastroUsuario
-
- ┃ ┃ ┗ 📜 cadastro.cy.js  # Testes completos de CRUD
-
- ┣ 📂 Seletores
-
- ┃ ┣ 📜 seletores.cy.js  # Mapeamento de elementos
-
- ┃ ┗ 📜 reaproveitamentoCodigo.cy.js  # Funções reutilizáveis (login, preenchimento de dados)
-
- ┣ 📂 DadosPessoais
-
- ┃ ┗ 📜 senhas.cy.js  # Credenciais usadas nos testes
-
  
 📌 Boas Práticas Aplicadas
 - Modularização: Separação de seletores, funções reutilizáveis e credenciais. ✅
