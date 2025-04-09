@@ -1,31 +1,32 @@
-# Cypress 🚀
-
+# Cypress 
 Este projeto foi desenvolvido como um desafio para demonstrar habilidades em automação de testes utilizando o Cypress.
 
-Índice
-Visão Geral
-Pré-requisitos
-Como Clonar e Configurar
-Como Instalar o Cypress
-Executando os Testes
-Estrutura do Projeto
-Contato
+## Índice
+- [Visão Geral](#visão-geral)
+- [Pré-requisitos](#pré-requisitos)
+- [Como Clonar e Configurar](#como-clonar-e-configurar)
+- [Como Instalar o Cypress](#como-instalar-o-cypress)
+- [Executando os Testes](#executando-os-testes)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Contato](#contato)
 
-# Visão Geral 🚀
+---
 
+## Visão Geral 
 Este projeto utiliza o Cypress para automatizar testes de interface e APIs, garantindo que os recursos da aplicação sejam testados de forma eficaz.
 
-# Pré-requisitos 🚀
+---
 
+## Pré-requisitos 
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
+- [Node.js](https://nodejs.org/) (versão 12 ou superior)
+- [Git](https://git-scm.com/)
+- Navegador Chrome, Firefox ou Edge
+- Editor de código (recomendado: [VSCode](https://code.visualstudio.com/))
 
-Node.js (versão 12 ou superior)
-Git
-Navegador Chrome, Firefox ou Edge
-Editor de código (recomendado: VSCode)
+---
 
-# Como Clonar e Configurar 🚀
-
+## Como Clonar e Configurar 
 Siga os passos abaixo para baixar e configurar o projeto:
 
 ```bash
@@ -37,7 +38,7 @@ cd challenge-cypress
 
 --
 
-## Como Instalar o Cypress 🚀
+## Como Instalar o Cypress 
 Instalação do Cypress
 
 1. Acesse o diretório do projeto.
@@ -53,7 +54,7 @@ yarn add cypress --dev
 Isso garantirá que o Cypress seja instalado corretamente dentro da pasta "e2e", pronta para executar testes de ponta a ponta.
 ---
 
-## Executando os Testes 🚀
+## Executando os Testes 
 
 Para executar os testes, você pode escolher entre duas opções:
 # 1. Abra o Test Runner do Cypress
@@ -62,7 +63,7 @@ npx cypress open
 # 2. Execute os testes em modo headless (sem interface gráfica)
 npx cypress run
 
-## Estrutura do Projeto 🚀
+## Estrutura do Projeto 
 automated-tests-cypress/
 ├── cypress/
 │   ├── e2e/             # Diretório onde ficam os testes automatizados (testes de ponta a ponta)
@@ -74,7 +75,7 @@ automated-tests-cypress/
 ├── README.md            # Documentação do projeto
 └── .gitignore           # Arquivos e pastas que devem ser ignorados pelo Git
 
-##Contato 🚀
+##Contato 
 Caso tenha dúvidas ou precise de suporte, entre em contato:
 
 Nome: Caio Ricardo
