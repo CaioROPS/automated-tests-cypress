@@ -1,4 +1,5 @@
-Cypress 🚀
+# Cypress 🚀
+
 Este projeto foi desenvolvido como um desafio para demonstrar habilidades em automação de testes utilizando o Cypress.
 
 Índice
@@ -9,21 +10,27 @@ Como Instalar o Cypress
 Executando os Testes
 Estrutura do Projeto
 Contato
-Visão Geral 🚀
+
+# Visão Geral 🚀
+
 Este projeto utiliza o Cypress para automatizar testes de interface e APIs, garantindo que os recursos da aplicação sejam testados de forma eficaz.
 
-Pré-requisitos 🚀
+# Pré-requisitos 🚀
+
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
 Node.js (versão 12 ou superior)
 Git
 Navegador Chrome, Firefox ou Edge
 Editor de código (recomendado: VSCode)
-Como Clonar e Configurar 🚀
+
+# Como Clonar e Configurar 🚀
+
 Siga os passos abaixo para baixar e configurar o projeto:
 
+```bash
 # Clone o repositório
-git clone https://github.com/iza-muller/challenge-cypress.git
+git clone https://github.com/CaioROPS/automated-tests-cypress.git
 
 # Acesse o diretório do projeto
 cd challenge-cypress
@@ -71,5 +78,5 @@ automated-tests-cypress/
 Caso tenha dúvidas ou precise de suporte, entre em contato:
 
 Nome: Caio Ricardo
-E-mail: caio.rops99@gmil.com
+E-mail: caio.rops99@gmail.com
 GitHub: CaioROPS
