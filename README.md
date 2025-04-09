@@ -1,91 +1,75 @@
-Automação de Testes com Cypress - CRUD de Usuários
+Cypress 🚀
+Este projeto foi desenvolvido como um desafio para demonstrar habilidades em automação de testes utilizando o Cypress.
 
-📖 Descrição
+Índice
+Visão Geral
+Pré-requisitos
+Como Clonar e Configurar
+Como Instalar o Cypress
+Executando os Testes
+Estrutura do Projeto
+Contato
+Visão Geral 🚀
+Este projeto utiliza o Cypress para automatizar testes de interface e APIs, garantindo que os recursos da aplicação sejam testados de forma eficaz.
 
-Este projeto implementa testes automatizados utilizando Cypress para validar um fluxo completo de CRUD de usuários na plataforma OrangeHRM. O objetivo é garantir a integridade e funcionalidade das operações de cadastro, edição e remoção de usuários administradores.
+Pré-requisitos 🚀
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
+Node.js (versão 12 ou superior)
+Git
+Navegador Chrome, Firefox ou Edge
+Editor de código (recomendado: VSCode)
+Como Clonar e Configurar 🚀
+Siga os passos abaixo para baixar e configurar o projeto:
 
-Tecnologias Utilizadas
+# Clone o repositório
+git clone https://github.com/iza-muller/challenge-cypress.git
 
-- Cypress: Framework de testes E2E.
+# Acesse o diretório do projeto
+cd challenge-cypress
 
-- Faker.js: Geração dinâmica de dados.
+--
 
-- Cypress Xpath: Suporte para seletores XPath.
+## Como Instalar o Cypress 🚀
+Instalação do Cypress
 
- Funcionalidades Testadas
+1. Acesse o diretório do projeto.
+2. Crie uma pasta chamada "e2e" na raiz do projeto (se não existir).
+3. Instale o Cypress dentro da pasta "e2e" utilizando o comando:
 
-- Cadastro de colaborador 
+npm install cypress --save-dev
 
-- Cadastro de colaborador Username não respeitando valor maximo de caracteres 
+ou
 
-- Cadastro de colaborador Username não respeitando valor minimo de caracteres
-- 
-- Cadastro de colaborador Username em branco 
+yarn add cypress --dev
 
-- Cadastro de colaborador first name em branco 
+Isso garantirá que o Cypress seja instalado corretamente dentro da pasta "e2e", pronta para executar testes de ponta a ponta.
+---
 
-- Cadastro de colaborador last name em branco 
+## Executando os Testes 🚀
 
-- Cadastro de colaborador first name não respeitando valor maximo de caracteres 
-
-- Cadastro de colaborador middle name não respeitando valor maximo de caracteres 
-
-- Cadastro de colaborador last name não respeitando valor maximo de caracteres 
-  
-- Login como administrador 
-
-- Cadastro de novo usuário administrador (com geração de nome dinâmico) 
-
-- Edição de usuário administrador (alteração de status e redefinição de senha) 
-
-- Exclusão de usuário administrador 
-
-- Validação de mensagens de sucesso 
-
-- Captura de screenshots em cada etapa
-- 
-- Validação de cadastro com username inválido usuário administrador 
-
-- Validação de cadastro com username em branco usuário administrador 
-
-- Validação de cadastro com senha fraca usuário administrador 
-
-- Validação de cadastro com senha ultrapassando o limite de caracteres usuário administrador 
-
-- Exclusão de colaborador 
-
- 
- Boas Práticas Aplicadas
-- Modularização: Separação de seletores, funções reutilizáveis e credenciais. 
-
-- Reutilização de código: Importação de funções para manter os testes limpos e escaláveis. 
-
-- Assertividade: Validação das ações realizadas, garantindo confiabilidade nos testes. 
-
-- Facilidade de manutenção: Código organizado e separado por responsabilidade. 
-
-
- Execução dos Testes
-
-Clone o repositório:
-git clone https://github.com/seu-usuario/seu-repositorio.git
-
-Instale as dependências:
-npm install
-
-Execute os testes:
+Para executar os testes, você pode escolher entre duas opções:
+# 1. Abra o Test Runner do Cypress
 npx cypress open
 
-ou em modo headless:
+# 2. Execute os testes em modo headless (sem interface gráfica)
 npx cypress run
 
+## Estrutura do Projeto 🚀
+automated-tests-cypress/
+├── cypress/
+│   ├── e2e/             # Diretório onde ficam os testes automatizados (testes de ponta a ponta)
+│   ├── fixtures/        # Arquivos de dados estáticos (ex: JSONs simulando dados de resposta)
+│   ├── support/         # Comandos customizados e configurações globais
+├── cypress.config.js    # Arquivo de configuração principal do Cypress (substitui o antigo cypress.json)
+├── package.json         # Configurações do projeto e dependências do Node.js
+├── package-lock.json    # Registro exato das versões das dependências instaladas
+├── README.md            # Documentação do projeto
+└── .gitignore           # Arquivos e pastas que devem ser ignorados pelo Git
 
- Contribuições
-Sugestões e melhorias são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+##Contato 🚀
+Caso tenha dúvidas ou precise de suporte, entre em contato:
 
-
-Feedbacks são sempre bem-vindos! 
-
-
-#Cypress #TestesAutomatizados #QA #BoasPráticas #Automação
+Nome: Caio Ricardo
+E-mail: caio.rops99@gmil.com
+GitHub: CaioROPS
