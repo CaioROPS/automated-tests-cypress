@@ -20,9 +20,8 @@ Este projeto utiliza o Cypress para automatizar testes de interface e APIs, gara
 ## Pré-requisitos 
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 - [Node.js](https://nodejs.org/) (versão 12 ou superior)
-- [Git](https://git-scm.com/)
-- Navegador Chrome, Firefox ou Edge
 - Editor de código (recomendado: [VSCode](https://code.visualstudio.com/))
+- Navegador Chrome, Firefox ou Edge
 
 ---
 
