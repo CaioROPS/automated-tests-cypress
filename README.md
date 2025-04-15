@@ -33,7 +33,7 @@ Siga os passos abaixo para baixar e configurar o projeto:
 git clone https://github.com/CaioROPS/automated-tests-cypress.git
 
 # Acesse o diretório do projeto
-cd challenge-cypress
+cd automated-tests-cypress
 
 --
 
